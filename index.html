@@ -67,7 +67,7 @@
           <div class="twocolumn">
             <div>
               <img
-                src="/examples/assets/IMG_3175.jpg"
+                src="dist/assets/IMG_3175.jpg"
                 width="350"
                 alt="Polaroid photo of Charles Cardinaux"
               />
@@ -115,7 +115,7 @@
                 <td>Legacy</td>
                 <td>
                   <img
-                    src="/examples/assets/mwf_button.png"
+                    src="dist/assets/mwf_button.png"
                     alt="Screenshot of MWF button"
                   />
                 </td>
@@ -130,7 +130,7 @@
                 <td>Used in production</td>
                 <td>
                   <img
-                    src="/examples/assets/moray_button.png"
+                    src="dist/assets/moray_button.png"
                     alt="Screenshot of Moray button"
                   />
                 </td>
@@ -145,7 +145,7 @@
                 <td>Used in production</td>
                 <td>
                   <img
-                    src="/examples/assets/reimagine_button.png"
+                    src="dist/assets/reimagine_button.png"
                     alt="Screenshot of Reimagine button"
                   />
                 </td>
@@ -162,7 +162,7 @@
                 <td>New project</td>
                 <td>
                   <img
-                    src="/examples/assets/reimagine_button.png"
+                    src="dist/assets/reimagine_button.png"
                     alt="Screenshot of Reimagine button"
                   />
                 </td>
@@ -179,65 +179,97 @@
           <p class="fragment">carousels</p>
           <img
             class="fragment"
-            src="/examples/assets/carousel.gif"
+            src="dist/assets/carousel.gif"
             alt="Gif of tired girl being dragged by a merry go round"
           />
         </section>
         <section>
           <h2>Example 1: Moray “sneak peek” carousel 🎠</h2>
-		  <div class="r-stack">
-		  <div class="twocolumn fragment current-visible">
-			<div>
-				<img src="/examples/assets/mwf_carousel.png" alt="Screenshot of MWF carousel" />
-				<small>Legacy MWF</small>
-			</div>
-			<div>
-				<img src="/examples/assets/moray_sneak_peek.png" alt="Screenshot of Moray sneak peek carousel" />
-				<small>Moray (<a href="/examples/moray-sneak-peek.html" target="_blank">example</a>)</small>
-			</div>
-		  </div>
-		  		  <div class="twocolumn smaller fragment current-visible">
-			<div>
-				<p>Design provided:</p>
-				<ul>
-					<li>Comps</li>
-					<li>Video of animation</li>
-				</ul>
-				<p>Accessibility required:</p>
-				<ul>
-					<li>Different interaction pattern from MWF carousel</li>
-					<li>New accessibility features like skip links and status message for screenreader users</li>
-				</ul>
-			</div>
-			<div>
-				<p>Engineering process:</p>
-				<ul>
-					<li>Start with <a href="https://getbootstrap.com/docs/4.6/components/carousel/" target="_blank">Bootstrap carousel</a> as base (rewritten to remove jQuery dependency and follow Moray standards)</li>
-					<li>Leverage existing design system components and layout</li>
-					<li>Close coordination with design (especially for animations)</li>
-					<li>Frequent accessibility feedback on dev builds</li>
-				</ul>
-			</div>
-		  </div>
-		  		  <div class="smaller fragment">
-				<p>Challenges and considerations:</p>
-				<ul>
-					<li>Getting the animation right without full specs (just a video)</li>
-					<ul>
-						<li>Slow animation wayyy down</li>
-						<li>Work directly with designer</li>
-					</ul>
-					<li>Logic of slides in a 3-D space</li>
-					<ul>
-						<li>Sneak peek experience would require a minimum of 3 slides</li>
-					</ul>
-					<li>Ensuring touch interactions worked as expected on mobile</li>
-					<ul>
-						<li>Leveraging Bootstrap was a huge help for this</li>
-					</ul>
-				</ul>
-		  </div>
-		  </div>
+          <div class="r-stack">
+            <div class="twocolumn fragment current-visible">
+              <div>
+                <img
+                  src="dist/assets/mwf_carousel.png"
+                  alt="Screenshot of MWF carousel"
+                />
+                <small>Legacy MWF</small>
+              </div>
+              <div>
+                <img
+                  src="dist/assets/moray_sneak_peek.png"
+                  alt="Screenshot of Moray sneak peek carousel"
+                />
+                <small
+                  >Moray (<a
+                    href="/examples/moray-sneak-peek.html"
+                    target="_blank"
+                    >example</a
+                  >)</small
+                >
+              </div>
+            </div>
+            <div class="twocolumn smaller fragment current-visible">
+              <div>
+                <p>Design provided:</p>
+                <ul>
+                  <li>Comps</li>
+                  <li>Video of animation</li>
+                </ul>
+                <p>Accessibility required:</p>
+                <ul>
+                  <li>Different interaction pattern from MWF carousel</li>
+                  <li>
+                    New accessibility features like skip links and status
+                    message for screenreader users
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p>Engineering process:</p>
+                <ul>
+                  <li>
+                    Start with
+                    <a
+                      href="https://getbootstrap.com/docs/4.6/components/carousel/"
+                      target="_blank"
+                      >Bootstrap carousel</a
+                    >
+                    as base (rewritten to remove jQuery dependency and follow
+                    Moray standards)
+                  </li>
+                  <li>Leverage existing design system components and layout</li>
+                  <li>
+                    Close coordination with design (especially for animations)
+                  </li>
+                  <li>Frequent accessibility feedback on dev builds</li>
+                </ul>
+              </div>
+            </div>
+            <div class="smaller fragment">
+              <p>Challenges and considerations:</p>
+              <ul>
+                <li>
+                  Getting the animation right without full specs (just a video)
+                </li>
+                <ul>
+                  <li>Slow animation wayyy down</li>
+                  <li>Work directly with designer</li>
+                </ul>
+                <li>Logic of slides in a 3-D space</li>
+                <ul>
+                  <li>
+                    Sneak peek experience would require a minimum of 3 slides
+                  </li>
+                </ul>
+                <li>
+                  Ensuring touch interactions worked as expected on mobile
+                </li>
+                <ul>
+                  <li>Leveraging Bootstrap was a huge help for this</li>
+                </ul>
+              </ul>
+            </div>
+          </div>
         </section>
       </div>
     </div>
