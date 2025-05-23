@@ -74,7 +74,7 @@
               <p>
                 <small class="smallest"
                   >Photo by Stephen Giang, former Microsoft design coworker and
-                  photography enthusiast</small
+                  Polaroid enthusiast</small
                 >
               </p>
             </div>
@@ -112,12 +112,13 @@
                     >Microsoft Web Framework (MWF)</a
                   >
                 </td>
-                <td>Legacy</td>
+                <td><small>Legacy, no longer used</small></td>
                 <td>
                   <img
-                    src="dist/assets/mwf_button.png"
+                    src="dist/assets/mwf_button_2.png"
                     alt="Screenshot of MWF button"
                   />
+                  <small>0px border radius</small>
                 </td>
                 <td>❌</td>
               </tr>
@@ -127,27 +128,34 @@
                     >MWF Moray</a
                   >
                 </td>
-                <td>Used in production</td>
+                <td>
+                  <small
+                    >Used in production, homepage and consumer store
+                    pages</small
+                  >
+                </td>
                 <td>
                   <img
                     src="dist/assets/moray_button.png"
                     alt="Screenshot of Moray button"
                   />
+                  <small>2px border radius</small>
                 </td>
                 <td>✅</td>
               </tr>
               <tr>
                 <td>
                   <a href="https://azure.microsoft.com/en-us/" target="_blank"
-                    >Moray Reimagine</a
+                    >Reimagine</a
                   >
                 </td>
-                <td>Used in production</td>
+                <td><small>Used in production, commercial pages</small></td>
                 <td>
                   <img
                     src="dist/assets/reimagine_button.png"
                     alt="Screenshot of Reimagine button"
                   />
+                  <small>8px border radius</small>
                 </td>
                 <td>❌</td>
               </tr>
@@ -159,29 +167,38 @@
                     >Reimagine Web Components</a
                   >
                 </td>
-                <td>New project</td>
-                <td>
-                  <img
-                    src="dist/assets/reimagine_button.png"
-                    alt="Screenshot of Reimagine button"
-                  />
-                </td>
+                <td><small>New project, one page live</small></td>
+                <td></td>
                 <td>✅</td>
               </tr>
             </table>
           </div>
         </section>
         <section>
-          <p>Today I’ll talk about</p>
-          <p class="fragment">
-            something I’ve worked a lot on over the years...
+          <p>
+            Today I’ll talk about something<br />I’ve worked a lot on over the
+            years...
           </p>
           <p class="fragment">carousels</p>
-          <img
-            class="fragment"
-            src="dist/assets/carousel.gif"
-            alt="Gif of tired girl being dragged by a merry go round"
-          />
+          <div class="fragment twocolumn">
+            <div class="smaller">
+              <p>Carousels can be challenging:</p>
+              <ul>
+                <li>Accessibility</li>
+                <li>Mobile experience</li>
+                <li>Touch interactions</li>
+                <li>Animations</li>
+                <li>Variable content</li>
+              </ul>
+            </div>
+            <div style="text-align: right">
+              <img
+                class="fragment"
+                src="dist/assets/carousel.gif"
+                alt="Gif of tired girl being dragged by a merry go round"
+              />
+            </div>
+          </div>
         </section>
         <section>
           <h2>Example 1: Moray “sneak peek” carousel 🎠</h2>
@@ -192,16 +209,22 @@
                   src="dist/assets/mwf_carousel.png"
                   alt="Screenshot of MWF carousel"
                 />
-                <small>Legacy MWF</small>
+                <small
+                  >Legacy MWF (<a
+                    href="https://web.archive.org/web/20190101011841/https://www.microsoft.com/en-us/"
+                    target="_blank"
+                    >example</a
+                  >)</small
+                >
               </div>
               <div>
                 <img
-                  src="dist/assets/moray_sneak_peek.png"
-                  alt="Screenshot of Moray sneak peek carousel"
+                  src="dist/assets/moray_highlight_sneak_peek.png"
+                  alt="Screenshot of Moray highlight sneak peek carousel"
                 />
                 <small
                   >Moray (<a
-                    href="moray-sneak-peek.html"
+                    href="moray-highlight-sneak-peek.html"
                     target="_blank"
                     >example</a
                   >)</small
@@ -212,10 +235,10 @@
               <div>
                 <p>Design provided:</p>
                 <ul>
-                  <li>Comps</li>
+                  <li>Basic specs</li>
                   <li>Video of animation</li>
                 </ul>
-                <p>Accessibility required:</p>
+                <p>Accessibility requirements:</p>
                 <ul>
                   <li>Different interaction pattern from MWF carousel</li>
                   <li>
@@ -228,20 +251,22 @@
                 <p>Engineering process:</p>
                 <ul>
                   <li>
-                    Start with
+                    Started with
                     <a
-                      href="https://getbootstrap.com/docs/4.6/components/carousel/"
+                      href="https://getbootstrap.com/docs/4.6/components/carousel/#with-controls"
                       target="_blank"
                       >Bootstrap carousel</a
                     >
-                    as base (rewritten to remove jQuery dependency and follow
-                    Moray standards)
+                    as base; rewrote JS to remove jQuery dependency and follow
+                    Moray standards
                   </li>
-                  <li>Leverage existing design system components and layout</li>
                   <li>
-                    Close coordination with design (especially for animations)
+                    Leveraged existing design system components and layout
                   </li>
-                  <li>Frequent accessibility feedback on dev builds</li>
+                  <li>
+                    Coordinated closely with design (especially for animations)
+                  </li>
+                  <li>Got frequent accessibility feedback on dev builds</li>
                 </ul>
               </div>
             </div>
@@ -268,6 +293,216 @@
                   <li>Leveraging Bootstrap was a huge help for this</li>
                 </ul>
               </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Example 2: Moray “product card” carousel 🎧</h2>
+          <div class="r-stack">
+            <div class="twocolumn fragment current-visible">
+              <div>
+                <img
+                  src="dist/assets/mwf_product_card_carousel.png"
+                  alt="Screenshot of MWF product card carousel"
+                />
+                <small
+                  >Legacy MWF (<a
+                    href="https://web.archive.org/web/20181229005947/https://www.microsoft.com/en-us/store/b/surface-accessories?activetab=pivot1%3arichpivot1-1"
+                    target="_blank"
+                    >example</a
+                  >)</small
+                >
+              </div>
+              <div>
+                <img
+                  src="dist/assets/moray_product_card.png"
+                  alt="Screenshot of Moray product card carousel"
+                />
+                <small
+                  >Moray (<a href="moray-product-card.html" target="_blank"
+                    >example</a
+                  >)</small
+                >
+              </div>
+            </div>
+            <div class="twocolumn smaller fragment current-visible">
+              <div>
+                <p>Design provided:</p>
+                <ul>
+                  <li>Specs</li>
+                </ul>
+                <p>Accessibility requirements:</p>
+                <ul>
+                  <li>Visible heading and status text</li>
+                  <li>New back to controls button</li>
+                </ul>
+                <p>PM requirements:</p>
+                <ul>
+                  <li>Quick implementation</li>
+                </ul>
+              </div>
+              <div>
+                <p>Engineering process:</p>
+                <ul>
+                  <li>Expanded Moray carousel to support product cards</li>
+                  <ul>
+                    <li>
+                      Added logic to redistribute cards between “slides” when
+                      the viewport resized
+                    </li>
+                    <li>
+                      Added method to provide localized status text string for
+                      JS interpolation
+                    </li>
+                  </ul>
+                  <li>Leveraged existing product card component</li>
+                </ul>
+              </div>
+            </div>
+            <div class="twocolumn smaller fragment">
+              <div>
+                <p>Challenges and considerations:</p>
+                <ul>
+                  <li>
+                    Existing carousel was built to increment one slide (group of
+                    items) at a time; didn't work as well with multiple small
+                    cards
+                  </li>
+                  <li>
+                    Adding additional logic for specific carousels was causing
+                    code bloat
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <img
+                  src="dist/assets/product_card_imperfection.png"
+                  alt="Screenshot of Moray product card carousel with large empty white space"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Interlude: Big Swings ⚾️</h2>
+          <div class="r-stack">
+            <div class="twocolumn">
+              <div>
+                <ul class="smaller">
+                  <li>
+                    Proposed redesign of homepage and PDPs (product detail
+                    pages)
+                  </li>
+                  <li>Designed by a v-team without engineering input</li>
+                  <li>Goal was to move quickly and make a splash</li>
+                  <li class="fragment highlight-red">
+                    Included many examples of small item carousels
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <img
+                  src="dist/assets/big_swings.png"
+                  alt="Screenshot of Big Swings homepage comp"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Interlude: Filmstrip 🎞️</h2>
+          <div class="">
+            <div class="twocolumn">
+              <div class="r-stack">
+                <div class="fragment current-visible">
+                  <ul class="smaller">
+                    <li>
+                      CSS scroll snap module became widely supported across browsers in 2022
+                    </li>
+                    <ul>
+                      <li>Perfect for a small item carousel experience</li>
+                      <li>Leverages native browser scrolling and animations</li>
+                      <li>Touch experience feels seamless on mobile; no need to write custom touch logic</li>
+                    </ul>
+                  </ul>
+                </div>
+                <div class="fragment">
+                  <ul class="smaller">
+                    <li>
+                      Proposed leveraging scroll snap for a new type of small
+                      item carousel
+                    </li>
+                    <li>
+                      Built
+                      <a href="https://ngkvhx.csb.app/" target="_blank"
+                        >prototypes</a
+                      >
+                      to demo scroll snap functionality to the design and
+                      accessibility teams and gather feedback
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <img
+                  src="dist/assets/filmstrip_prototypes.png"
+                  alt="Screenshot of Filmstrip prototypes"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+		        <section>
+          <h2>Example 3:<br>Reimagine carousel 🚾</h2>
+          <div class="r-stack">
+            <div class="fragment current-visible">
+                <img
+                  src="dist/assets/reimagine_carousel.png"
+                  alt="Screenshot of Reimagine carousel"
+				  width="650"
+                />
+                <small
+                  >Reimagine Web Components (<a
+                    href="https://azure.microsoft.com/en-us/products/defender-for-cloud/"
+                    target="_blank"
+                    >example</a
+                  >)</small
+                >
+            </div>
+            <div class="twocolumn smaller fragment current-visible">
+              <div>
+                <p>Design provided:</p>
+                <ul>
+                  <li>Specs</li>
+                </ul>
+                <p>Accessibility requirements:</p>
+                <ul>
+                  <li>No dedicated accessibility team on this project</li>
+                  <li>Ported accessibility features from Moray</li>
+                </ul>
+              </div>
+              <div>
+                <p>Engineering process:</p>
+                <ul>
+                  <li>Built base Scrollslider and ScrollsliderItem components to provide scroll snap functionality</li>
+				  <li>Built Carousel and CarouselItem components that extend Scrollslider components and add additional styles and functionality</li>
+                  <li>Leveraged existing card components for carousel content</li>
+                </ul>
+              </div>
+            </div>
+            <div class=" smaller fragment">
+              <div>
+                <p>Challenges and considerations:</p>
+                <ul>
+                  <li>
+                    Received late guidance from design that overflow elements should optionally be full-bleed
+                  </li>
+				  <ul>
+					<li>This was not clear from specs</li>
+					<li>Added a full-bleed attribute that uses padding, negative margin, and scroll padding to implement a full-bleed effect</li>
+				  </ul>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
