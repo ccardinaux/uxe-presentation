@@ -86,8 +86,9 @@
                   Passionate about accessibility and building great user
                   experiences
                 </li>
+                <li>Love collaborating across disciplines</li>
                 <li>
-                  Outside of work, I love travel and music - I am currently
+                  Outside of work, I enjoy travel and music - I am currently
                   singing with a French choir 🇫🇷 in Seattle
                 </li>
               </ul>
@@ -242,8 +243,8 @@
                 <ul>
                   <li>Different interaction pattern from MWF carousel</li>
                   <li>
-                    New accessibility features like skip links and status
-                    message for screenreader users
+                    New accessibility features like skip links and different
+                    ARIA attributes
                   </li>
                 </ul>
               </div>
@@ -280,17 +281,17 @@
                   <li>Slow animation wayyy down</li>
                   <li>Work directly with designer</li>
                 </ul>
-                <li>Logic of slides in a 3-D space</li>
-                <ul>
-                  <li>
-                    Sneak peek experience would require a minimum of 3 slides
-                  </li>
-                </ul>
                 <li>
                   Ensuring touch interactions worked as expected on mobile
                 </li>
                 <ul>
                   <li>Leveraging Bootstrap was a huge help for this</li>
+                </ul>
+                <li>Logic of slides in a 3-D space</li>
+                <ul>
+                  <li>
+                    Sneak peek experience would require a minimum of 3 slides
+                  </li>
                 </ul>
               </ul>
             </div>
@@ -389,6 +390,7 @@
             <div class="twocolumn">
               <div>
                 <ul class="smaller">
+                  <li>Microsoft introduced new brand guidelines</li>
                   <li>
                     Proposed redesign of homepage and PDPs (product detail
                     pages)
@@ -417,12 +419,16 @@
                 <div class="fragment current-visible">
                   <ul class="smaller">
                     <li>
-                      CSS scroll snap module became widely supported across browsers in 2022
+                      CSS scroll snap module became widely supported across
+                      browsers in 2022
                     </li>
                     <ul>
                       <li>Perfect for a small item carousel experience</li>
                       <li>Leverages native browser scrolling and animations</li>
-                      <li>Touch experience feels seamless on mobile; no need to write custom touch logic</li>
+                      <li>
+                        Touch experience feels seamless on mobile; no need to
+                        write custom touch logic
+                      </li>
                     </ul>
                   </ul>
                 </div>
@@ -452,22 +458,22 @@
             </div>
           </div>
         </section>
-		        <section>
-          <h2>Example 3:<br>Reimagine carousel 🚾</h2>
+        <section>
+          <h2>Example 3:<br />Reimagine carousel 🚾</h2>
           <div class="r-stack">
             <div class="fragment current-visible">
-                <img
-                  src="dist/assets/reimagine_carousel.png"
-                  alt="Screenshot of Reimagine carousel"
-				  width="650"
-                />
-                <small
-                  >Reimagine Web Components (<a
-                    href="https://azure.microsoft.com/en-us/products/defender-for-cloud/"
-                    target="_blank"
-                    >example</a
-                  >)</small
-                >
+              <img
+                src="dist/assets/reimagine_carousel.png"
+                alt="Screenshot of Reimagine carousel"
+                width="650"
+              />
+              <small
+                >Reimagine Web Components (<a
+                  href="https://azure.microsoft.com/en-us/products/defender-for-cloud/"
+                  target="_blank"
+                  >example</a
+                >)</small
+              >
             </div>
             <div class="twocolumn smaller fragment current-visible">
               <div>
@@ -484,27 +490,48 @@
               <div>
                 <p>Engineering process:</p>
                 <ul>
-                  <li>Built base Scrollslider and ScrollsliderItem components to provide scroll snap functionality</li>
-				  <li>Built Carousel and CarouselItem components that extend Scrollslider components and add additional styles and functionality</li>
-                  <li>Leveraged existing card components for carousel content</li>
+                  <li>
+                    Built base Scrollslider and ScrollsliderItem components to
+                    provide scroll snap functionality
+                  </li>
+                  <li>
+                    Built Carousel and CarouselItem components that extend
+                    Scrollslider components and add additional styles and
+                    functionality
+                  </li>
+                  <li>
+                    Leveraged existing card components for carousel content
+                  </li>
                 </ul>
               </div>
             </div>
-            <div class=" smaller fragment">
+            <div class="smaller fragment">
               <div>
                 <p>Challenges and considerations:</p>
                 <ul>
                   <li>
-                    Received late guidance from design that overflow elements should optionally be full-bleed
+                    Received late guidance from design that overflow elements
+                    should optionally be full-bleed
                   </li>
-				  <ul>
-					<li>This was not clear from specs</li>
-					<li>Added a full-bleed attribute that uses padding, negative margin, and scroll padding to implement a full-bleed effect</li>
-				  </ul>
+                  <ul>
+                    <li>This was not clear from specs</li>
+                    <li>
+                      Added a full-bleed attribute that uses padding, negative
+                      margin, and scroll padding to implement a full-bleed
+                      effect
+                    </li>
+                  </ul>
                 </ul>
               </div>
             </div>
           </div>
+        </section>
+        <section>
+          <h2>Thank you!</h2>
+          <img
+            src="dist/assets/carousel2.gif"
+            alt="Gif of dogs on a merry go round"
+          />
         </section>
       </div>
     </div>
